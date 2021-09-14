@@ -1,0 +1,40 @@
+:root{
+    font-size: 60%;
+
+    --color-background: #0d0d0d;
+    --color-background-light: #EBEBEB;
+    --color-primary: #E9204F;
+    --color-primary-dark: #BB0049;
+    --color-text-dark: #BBBBBB;
+    --color-text-light: #5A5A5A;
+    --color-title-light: #212121;
+    --color-white: #f6f6f6;
+   
+  
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body, #root {
+    height: auto;
+}
+
+body, input, textarea, button{
+    font: 500 1.6rem Roboto;
+}
+
+h1,h2,h3,h4,h5{
+    font: 700 1.6rem Montserrat;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

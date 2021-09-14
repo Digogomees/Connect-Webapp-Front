@@ -1,0 +1,33 @@
+footer{
+    padding: 30rem 0 10rem 0;
+}
+
+.contentFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.social_media{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 .750rem;
+}
+
+.contentFooter .social_media i{
+    color: #b4b4b4;
+    font-size: 3rem;
+    cursor: pointer;
+    
+}
+
+.contentFooter .social_media i:hover{
+    color: var(--color-primary);
+}
+
+.contentFooter span{
+    color: #b4b4b4;
+    font: 1.7rem Roboto;
+}

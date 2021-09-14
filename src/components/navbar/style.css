@@ -1,0 +1,56 @@
+header{
+    width: 100%;
+    height: 70px;
+    color: var(--color-text-dark);
+    
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+
+.brand span{
+    
+    color: var(--color-white);
+    font: 600 2rem Roboto;
+}
+
+
+
+.brand svg{
+    margin-right: 10px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--color-white);
+    font: 500 2rem Roboto;
+}
+

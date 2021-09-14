@@ -1,0 +1,53 @@
+.navWhite{
+    width: 100%;
+    height: 70px;
+    background: var(--color-white);
+    color: var(--color-text-dark);
+    
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.navbarWhite{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.brandwhite{
+    display: flex;
+    align-items: center;
+}
+
+.brandwhite span{
+    color: var(--color-text-dark);
+    font: 600 2rem Roboto;
+}
+
+.brandwhite svg{
+    margin-right: 10px;
+}
+
+.navbarWhite ul {
+    display: flex;
+}
+
+.navbarWhite ul li{
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.navbarWhite ul li a{
+    text-decoration: none;
+    font: 500 2rem Roboto;
+}
+
+
+
