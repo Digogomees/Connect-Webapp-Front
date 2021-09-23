@@ -43,7 +43,6 @@ font{
 
 }
 
-
 .content .zoom_image:hover img{
     opacity: 0.5;
 }
@@ -65,13 +64,48 @@ font{
 }
 
 .meta_brand span{
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: var(--color-text-dark);
     margin-top: 1rem;
 }
 
 .content .zoom_image:hover .meta_brand{
-
     opacity: 1;
-   
+}
+
+@media (max-width:728px) and (min-width:421px){
+
+    .header-main{
+        height: auto;
+        padding-top: 10rem;
+    }
+
+    .header-text h2{
+        max-width: 100%;
+        font-size: 25px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width:420px){
+
+    .header-main{
+        height: auto;
+        padding-top: 10rem;
+    }
+
+  .header-text h2{
+      max-width: 100%;
+      font-size: 25px;
+      line-height: 1.4;
+  }
+
+  .header-text p{
+      font-size: 15px;
+  }
+
+  .content .zoom_image, .content .zoom_image img{
+      height: 300px;
+  }
+    
 }

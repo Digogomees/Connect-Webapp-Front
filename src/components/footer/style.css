@@ -1,5 +1,5 @@
 footer{
-    padding: 30rem 0 10rem 0;
+    padding: 10rem 0;
 }
 
 .contentFooter{
@@ -16,14 +16,14 @@ footer{
     gap: 0 .750rem;
 }
 
-.contentFooter .social_media i{
+ .social_media i{
     color: #b4b4b4;
     font-size: 3rem;
     cursor: pointer;
     
 }
 
-.contentFooter .social_media i:hover{
+ .social_media i:hover{
     color: var(--color-primary);
 }
 
@@ -31,3 +31,47 @@ footer{
     color: #b4b4b4;
     font: 1.7rem Roboto;
 }
+
+@media (max-width:800px){
+    footer{
+        padding: 4rem 0;
+    }
+
+    .contentFooter{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contentFooter svg{
+        width: 130px;
+        height: 130px;
+        margin-bottom: 6rem;
+    }
+
+    .social{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .social_media{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:420px){
+    .social{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+
+    .contentFooter span{
+        font-size: 15px;
+    }
+}
+

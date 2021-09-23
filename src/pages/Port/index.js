@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/footer';
 import Navbar from '../../components/navbar/nav';
@@ -15,7 +16,7 @@ export default function Portfolio() {
 
         api.get('/projects')
             .then(response => {
-                setNewProject(response.data.project)
+                setNewProject(response.data)
                 console.log(response.data)
             })
     }, [])
@@ -27,7 +28,7 @@ export default function Portfolio() {
 
     return (
         <div>
-
+            <Helmet title="Somos Connect - Portfólio" />
             <Navbar color={estilo} />
 
             <section className="header-main">
@@ -48,14 +49,11 @@ export default function Portfolio() {
                             {project.map(list =>{
                         return (
                             <div className="banner_thumb">
-                                <Link to={`project/${list.id}`} className="zoom_image">
-                                
+                                <Link to={`project/${list.slug}`} className="zoom_image">
                                     <img src={list.thumbnail} alt={list.title}/>
-                                    
-
                                     <div className="meta_brand">
                                     <h2>{list.title}</h2>
-                                    <span>Projetos</span>
+                                    <span>Branding</span>
                                     </div>
                                 </Link>
                             </div>

@@ -4,6 +4,7 @@ import './style.css'
 
 import api from '../../services/api'
 import Footer from '../../components/footer';
+import { Helmet } from 'react-helmet';
 
 export default function Project(props) {
 
@@ -14,22 +15,23 @@ export default function Project(props) {
         api.get(`project/${props.match.params.title}`)
         .then(response => {
 
-            setNewBrand(response.data.project)
+            setNewBrand(response.data)
             setNewimages(response.data.images)
 
         }).catch(err => {
             console.log(err)
         })
-           
-        
 
     }, [])
 
-
+    const estilo = {
+        color: "#EB3656"
+    }
 
     return (
         <div>
-            <Navbar />
+            <Helmet title={`Projetos - ${brand.title}`} />
+            <Navbar color={estilo} />
                     <section className="main_text">
                         <div className="container">
                             <div className="text_description">
@@ -40,7 +42,7 @@ export default function Project(props) {
                     </section>
 
                     <section className="brand_img">
-                        <div className="container">
+                        <div>
                             
                             {images.map((img, index) => {
 

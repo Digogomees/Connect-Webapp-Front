@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './style.css'
 import api from '../../services/api';
+import { Helmet } from 'react-helmet';
 
 function Home(){
 
@@ -13,7 +14,7 @@ function Home(){
     useEffect(()=>{
 
         api.get('/projects')
-        .then(response => setImage(response.data.project))
+        .then(response => setImage(response.data))
 
         console.log(image)
     },[])
@@ -21,6 +22,7 @@ function Home(){
 
     return(
         <div>
+            <Helmet title="Somos Connect" />
             <Navbar />
         <section className="header">
             <div className="container">
@@ -40,11 +42,15 @@ function Home(){
                     <div className="box"></div>
                     <div className="box"></div> */}
 
-                    {image.map((img, indx) => {
+                    {image.slice(0,4).reverse().map((img, indx) => {
                         return(
-                            <div className="box">
-                                <img style={{width:"100%"}} src={img.thumbnail} />
-                            </div>
+                            <Link to={`project/${img.slug}`} key={img.id} className="zoom_image">
+                                <img src={img.thumbnail} alt={img.title}/>
+                                <div className="meta_brand">
+                                <h2>{img.title}</h2>
+                                <span>Branding</span>
+                                </div>
+                            </Link>
                         )
                     })}
                 </div>

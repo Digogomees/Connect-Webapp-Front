@@ -8,6 +8,10 @@ function Footer(){
         return new Date().getFullYear();
       };
 
+      const be = "https://www.behance.net/somosconnect"
+      const inst = "https://www.instagram.com/agencia.connect/"
+      const face = "https://www.facebook.com/connectbe"
+
     return(
         <footer>
             <div className="container">
@@ -38,13 +42,13 @@ function Footer(){
                 </defs>
                 </svg>
 
-                    <div>
+                    <div className="social">
                         <div className="social_media">
-                            <i class='bx bxl-instagram' ></i>
-                            <i class='bx bxl-facebook-square' ></i>
-                            <i class='bx bxl-behance' ></i>
+                            <a target="_blank" href={inst}><i class='bx bxl-instagram'></i></a>
+                            <a target="_blank" href={face}><i class='bx bxl-facebook-square' ></i></a>
+                            <a target="_blank" href={be}><i class='bx bxl-behance' ></i></a>
                         </div>
-                        <span> Somos Connect - Copyright @{getCurrentYear()}</span>
+                        <span> @{getCurrentYear()} - Copyright</span>
                     </div>
                 </div>
             </div>
