@@ -17,7 +17,8 @@ export default function Portfolio() {
         api.get('/projects')
             .then(response => {
                 setNewProject(response.data)
-                console.log(response.data)
+            }).catch(err => {
+                console.log(err)
             })
     }, [])
 

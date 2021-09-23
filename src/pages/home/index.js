@@ -15,8 +15,9 @@ function Home(){
 
         api.get('/projects')
         .then(response => setImage(response.data))
-
-        console.log(image)
+        .catch((err) => {
+            console.log(err)
+        })
     },[])
 
 
