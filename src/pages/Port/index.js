@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 import Footer from '../../components/footer';
 import Navbar from '../../components/navbar/nav';
 import api from '../../services/api';
@@ -50,13 +49,13 @@ export default function Portfolio() {
                             {project.map(list =>{
                         return (
                             <div className="banner_thumb">
-                                <Link to={`project/${list.slug}`} className="zoom_image">
+                                <a href={`project/${list.slug}`} className="zoom_image">
                                     <img src={list.thumbnail} alt={list.title}/>
                                     <div className="meta_brand">
                                     <h2>{list.title}</h2>
                                     <span>Branding</span>
                                     </div>
-                                </Link>
+                                </a>
                             </div>
                         )
                     })}

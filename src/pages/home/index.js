@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import './style.css'
 import Footer from '../../components/footer';
 import Navbar from '../../components/navbar/nav';
-import { Link } from 'react-router-dom';
-
-import './style.css'
 import api from '../../services/api';
-import { Helmet } from 'react-helmet';
 
 function Home(){
 
@@ -29,7 +27,7 @@ function Home(){
             <div className="container">
             <div className="text">
                 <h2>Conectamos pessoas a marcas</h2>
-                <p>Somos branding e comunicação integrada</p>
+                <p>Somos Branding e Comunicação Integrada</p>
             </div>
             </div>
         </section>
@@ -38,24 +36,20 @@ function Home(){
             <main className="show-port">
             <div className="container">
                 <div className="content">
-                    {/* <div className="box"></div>
-                    <div className="box"></div>
-                    <div className="box"></div>
-                    <div className="box"></div> */}
 
                     {image.slice(0,4).reverse().map((img, indx) => {
                         return(
-                            <Link to={`project/${img.slug}`} key={img.id} className="zoom_image">
+                            <a href={`project/${img.slug}`} key={img.id} className="zoom_image">
                                 <img src={img.thumbnail} alt={img.title}/>
                                 <div className="meta_brand">
                                 <h2>{img.title}</h2>
                                 <span>Branding</span>
                                 </div>
-                            </Link>
+                            </a>
                         )
                     })}
                 </div>
-                <Link to="/portfolio" className="btn">Ver todos os projetos</Link>
+                <a href="/portfolio" className="btn">Ver todos os projetos</a>
             </div>
             </main>
         </section>
@@ -68,9 +62,9 @@ function Home(){
                             <i class='bx bx-bar-chart-alt-2'></i>
                         </div>
                         <div className="title_box">
-                            <h3>Comunicação empresárial</h3>
+                            <h3>Comunicação Empresarial</h3>
                         </div>
-                        <div><p>Consultorias, Análise de mercado interno e externo e planejamento estratégico para que sua empresa alavanque.</p></div>
+                        <div><p>Planejamento Estratégico, Consultoria e Análise de mercado para o sucesso da sua empresa.</p></div>
                     </div>
                     <div className="service_box">
                         <div>
@@ -79,7 +73,7 @@ function Home(){
                         <div className="title_box">
                             <h3>MKT Digital</h3>
                         </div>
-                        <div><p>Planejamento e ações de camapnhas digitais com Facebook Business, Google Ads e Instagram.</p></div>
+                        <div><p>Planejamento e ações de campanhas digitais com Facebook Business, Google Ads e Instagram.</p></div>
                     </div>
                     <div className="service_box">
                         <div>
@@ -88,7 +82,7 @@ function Home(){
                         <div className="title_box">
                             <h3>Branding</h3>
                         </div>
-                        <div><p>Desenvolvimento de identidade visuais, logotipos e tudo que sua marca precisa para ser vista e lembrada.</p></div>
+                        <div><p>Desenvolvimento de identidades visuais, logotipos e tudo que sua marca precisa para ser vista e lembrada.</p></div>
                     </div>
                 </div>
             </div>

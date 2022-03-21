@@ -42,7 +42,6 @@ export default function Contact(){
                             </div>
                             <a href={email} target="_blank" className="btn_contact">Entrar em Contato</a>
                         </div>
-                        
                     </div>
                 </div>
             </main>
