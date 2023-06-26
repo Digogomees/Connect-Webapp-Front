@@ -38,7 +38,7 @@ export default function Contact(){
                             <div className="icon_contact"><i class='bx bx-envelope'></i></div>
                             <div className="text_contact">
                                 <h2>Contato por Email </h2>
-                                <p>Já aqui você pode solicitar orçamentos, briefings e tirar dúvidas sobre os projetos</p>
+                                <p>solicite orçamentos, briefings e tire suas dúvidas sobre os projetos</p>
                             </div>
                             <a href={email} target="_blank" className="btn_contact">Entrar em Contato</a>
                         </div>

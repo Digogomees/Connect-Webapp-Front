@@ -43,16 +43,14 @@ export default function Project(props) {
 
                     <section className="brand_img">
                         <div>
-                            
                             {images.map((img, index) => {
-
+                                const pathImage = 'http://localhost:5555'
                                 return (
                                     <div key={index} className="img">
-                                    <img src={img} />
+                                    <img src={`${pathImage}/files/${img}` || img} alt='upload' />
                                     </div>
                                 )
                             })}
-                            
                         </div>
                     </section>
 

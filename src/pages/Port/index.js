@@ -9,7 +9,7 @@ export default function Portfolio() {
 
 
     const [project, setNewProject] = useState([]);
-   
+
 
     useEffect(() => {
 
@@ -44,21 +44,20 @@ export default function Portfolio() {
                 <main className="show-port">
                     <div className="container">
                         <div className="content">
-
-
-                            {project.map(list =>{
-                        return (
-                            <div className="banner_thumb">
-                                <a href={`project/${list.slug}`} className="zoom_image">
-                                    <img src={list.thumbnail} alt={list.title}/>
-                                    <div className="meta_brand">
-                                    <h2>{list.title}</h2>
-                                    <span>Branding</span>
+                            {project.map(list => {
+                                const pathImage = 'http://localhost:5555'
+                                return (
+                                    <div className="banner_thumb">
+                                        <a href={`project/${list.slug}`} className="zoom_image">
+                                            <img src={`${pathImage}/files/${list.thumbnail}`} alt={list.title} />
+                                            <div className="meta_brand">
+                                                <h2>{list.title}</h2>
+                                                <span>Branding</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
-                        )
-                    })}
+                                )
+                            })}
 
                         </div>
                     </div>

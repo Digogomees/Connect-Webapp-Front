@@ -1,0 +1,94 @@
+
+
+.loginAdmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.boxAdminInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 3rem 2rem;
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.imgLogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(210px, -60px);
+    padding: 11px;
+    background: #0d0d0d;
+    border-radius: 50rem;
+}
+
+.imgLogo img {
+    width: 68px;
+    height: 68px;
+}
+
+.formInputs, .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.formInputs {
+    gap: 16px;
+}
+
+.inputs {
+    gap: 8px;
+}
+
+.inputs label{
+    color: var(--color-white);
+}
+
+.inputs input{
+    border: none;
+    background-color: #131313;
+    padding: 0.75rem  1.063rem;
+    height: 55px;
+    border-radius: 7px;
+    color: var(--color-text-dark);
+}
+
+.inputs input:focus{
+    outline: none;
+    border: 1px solid var(--color-primary);
+}
+
+.btnAdmin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 23px;
+    height: 45px;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in;
+}
+
+.btnAdmin button {
+    background: none;
+    border: none;
+    color: var(--color-white);
+}
+
+.btnAdmin:hover {
+    background-color: var(--color-primary-dark);
+}

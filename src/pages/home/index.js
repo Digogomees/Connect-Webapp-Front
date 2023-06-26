@@ -38,12 +38,13 @@ function Home(){
                 <div className="content">
 
                     {image.slice(0,4).reverse().map((img, indx) => {
+                        const pathImage = 'http://localhost:5555'
                         return(
                             <a href={`project/${img.slug}`} key={img.id} className="zoom_image">
-                                <img src={img.thumbnail} alt={img.title}/>
+                                <img src={`${pathImage}/files/${img.thumbnail}`} alt={img.title}/>
                                 <div className="meta_brand">
                                 <h2>{img.title}</h2>
-                                <span>Branding</span>
+                                <span>{img.tags}</span>
                                 </div>
                             </a>
                         )
@@ -64,16 +65,20 @@ function Home(){
                         <div className="title_box">
                             <h3>Comunicação Empresarial</h3>
                         </div>
-                        <div><p>Planejamento Estratégico, Consultoria e Análise de mercado para o sucesso da sua empresa.</p></div>
+                        <div>
+                            <p>Planejamento Estratégico, Consultoria e Análise de mercado para o sucesso da sua empresa.</p>
+                        </div>
                     </div>
                     <div className="service_box">
                         <div>
                             <i class='bx bx-rocket' ></i>
                         </div>
                         <div className="title_box">
-                            <h3>MKT Digital</h3>
+                            <h3>Tecnologia</h3>
                         </div>
-                        <div><p>Planejamento e ações de campanhas digitais com Facebook Business, Google Ads e Instagram.</p></div>
+                        <div>
+                            <p>Desenvolvimento de sites, desenvolvimento de protótipos para apps web e mobile sempre focado na melhor experiência para o usuário.</p>
+                        </div>
                     </div>
                     <div className="service_box">
                         <div>
