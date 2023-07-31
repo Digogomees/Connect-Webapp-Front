@@ -5,7 +5,7 @@ import api from "../../../services/api";
 import "./login.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import { Redirect, useHistory } from "react-router-dom/cjs/react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 export default function Admin() {
 

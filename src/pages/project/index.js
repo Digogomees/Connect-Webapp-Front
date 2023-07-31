@@ -5,14 +5,23 @@ import './style.css'
 import api from '../../services/api'
 import Footer from '../../components/footer';
 import { Helmet } from 'react-helmet';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Project(props) {
 
     const [brand, setNewBrand] = useState({})
     const [images, setNewimages] = useState([])
+    const { title } = useParams()
+
+    const updateViewsProject = async (id) => {
+        await api.put(`project/${id}/views`)
+       .catch(err => {
+            console.log(err)
+        })
+    }
 
     useEffect(() => {
-        api.get(`project/${props.match.params.title}`)
+        api.get(`project/${title}`)
         .then(response => {
 
             setNewBrand(response.data)
@@ -22,7 +31,11 @@ export default function Project(props) {
             console.log(err)
         })
 
-    }, [])
+    }, [title])
+
+    useEffect(() => {
+        updateViewsProject(brand?.id)
+    },[brand])
 
     const estilo = {
         color: "#EB3656"

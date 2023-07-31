@@ -51,7 +51,7 @@ font{
     margin-top: 3rem;
     color: var(--color-white);
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 8%;
     opacity: 0;
     transition: all .3s;
@@ -67,6 +67,21 @@ font{
     font-size: 1.4rem;
     color: var(--color-text-dark);
     margin-top: 1rem;
+}
+
+.meta_views {
+    background-color: rgba(220, 220, 220, 0.497);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    max-width: 40px;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.meta_views svg {
+    fill: #b8b8b8;
 }
 
 .content .zoom_image:hover .meta_brand{

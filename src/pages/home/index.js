@@ -4,6 +4,7 @@ import './style.css'
 import Footer from '../../components/footer';
 import Navbar from '../../components/navbar/nav';
 import api from '../../services/api';
+import IconView from '../../assets/icons/eyeIcon';
 
 function Home(){
 
@@ -36,15 +37,18 @@ function Home(){
             <main className="show-port">
             <div className="container">
                 <div className="content">
-
-                    {image.slice(0,4).reverse().map((img, indx) => {
+                    {image.slice(0,4).reverse().map((project, indx) => {
                         const pathImage = 'http://localhost:5555'
                         return(
-                            <a href={`project/${img.slug}`} key={img.id} className="zoom_image">
-                                <img src={`${pathImage}/files/${img.thumbnail}`} alt={img.title}/>
+                            <a href={`project/${project.slug}`} key={project.id} className="zoom_image">
+                                <img src={`${pathImage}/files/${project.thumbnail}`} alt={project.title}/>
                                 <div className="meta_brand">
-                                <h2>{img.title}</h2>
-                                <span>{img.tags}</span>
+                                <h2>{project.title}</h2>
+                                <span>{project.tags}</span>
+                                <div className='meta_views'>
+                                    <IconView />
+                                    <p>{project.views}</p>
+                                </div>
                                 </div>
                             </a>
                         )
